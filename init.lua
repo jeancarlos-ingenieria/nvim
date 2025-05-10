@@ -1,10 +1,5 @@
--- ========================================================================== --
--- ==                           EDITOR SETTINGS                            == --
--- ========================================================================== --
-
--- Learn more about Neovim lua api
--- https://neovim.io/doc/user/lua-guide.html
--- https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/
+-- NEOVIM SETTINGS
+-- https://neovim.io
 
 vim.o.number = true
 vim.o.relativenumber = true
@@ -26,9 +21,7 @@ vim.g.mapleader = ' '
 vim.keymap.set({'n', 'x'}, 'gy', '"+y', {desc = 'Copy to clipboard'})
 vim.keymap.set({'n', 'x'}, 'gp', '"+p', {desc = 'Paste clipboard content'})
 
--- ========================================================================== --
--- ==                               PLUGINS                                == --
--- ========================================================================== --
+-- NEOVIM PLUGINS
 
 local lazy = {}
 
@@ -69,9 +62,7 @@ lazy.path = table.concat({
 
 lazy.opts = {}
 
--- Learn more about lazy.nvim
--- (plugin configuration, how to split your config in multiple files)
--- https://dev.to/vonheikemen/lazynvim-plugin-configuration-3opi
+-- Lazy.nvim plugins
 lazy.setup({
   {'folke/tokyonight.nvim'},
   {'folke/which-key.nvim'},
@@ -86,9 +77,7 @@ lazy.setup({
   ),
 })
 
--- ========================================================================== --
--- ==                         PLUGIN CONFIGURATION                         == --
--- ========================================================================== --
+-- PLUGIN CONFIGURATION
 
 vim.cmd.colorscheme('tokyonight')
 
