@@ -1,1 +1,0 @@
-+ Configurations of neovim
